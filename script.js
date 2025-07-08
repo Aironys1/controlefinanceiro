@@ -1,7 +1,4 @@
-    alert("Sistema Criado por:\n\nAironys Garrido");
-
-
-    function calcular() {
+   function calcular() {
     const inputs = document.querySelectorAll('.input');
     let ganhos = 0;
     let vrva = 0;
