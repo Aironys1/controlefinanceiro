@@ -1,6 +1,9 @@
 function exportarCSV() {
   const inputs = document.querySelectorAll('.input');
-  const dados = [['Campo', 'Valor']];
+  const linhas = dados.map(linha =>
+  linha.join(';')
+).join('\n');
+
 
   inputs.forEach(input => {
     const label = input.previousElementSibling?.innerText?.trim() || 'Sem label';
@@ -45,3 +48,21 @@ if (typeof gtag === 'function') {
     event_label: 'Clique no botão Exportar CSV'
   });
 }
+
+
+
+document.querySelectorAll('.input').forEach(input => {
+  input.addEventListener('input', event => {
+    calcular();
+
+    if (typeof gtag === 'function') {
+      const tipoCampo = event.target.dataset.type || 'desconhecido';
+      const nomeEvento = `digitou_${tipoCampo}`;
+
+      gtag('event', nomeEvento, {
+        campo: tipoCampo,
+        valor: event.target.value || '0'
+      });
+    }
+  });
+});
