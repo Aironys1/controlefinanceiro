@@ -26,3 +26,20 @@
   });
 
   calcular();
+
+
+
+  document.querySelectorAll('.input').forEach(input => {
+  input.addEventListener('input', event => {
+    calcular();
+
+    // Enviar evento para o Google Analytics 4
+    if (typeof gtag === 'function') {
+      gtag('event', 'digitou_valor', {
+        campo: event.target.dataset.type || 'desconhecido',
+        valor: event.target.value || '0'
+      });
+    }
+  });
+});
+
