@@ -20,7 +20,7 @@
     }
 
     .bloco1{
-        background-color: #3f3b3b;
+        background-color: #1a1919;
         color:#ffffff;
     }
 
@@ -68,23 +68,43 @@
       font-size: 1em;
       width: 100%;
     }
-
+   
     .resultados {
-      background: #3f3b3b;
+      background: #1a1919;
       padding: 10px;
       border: 1px solid #ddd;
       border-radius: 4px;
+      justify-content: center;
+      align-items: center;
+      display: block;
+      margin: 0 auto;
+      
     }
 
     .ganhos {
-      color: green;
+      color: rgb(13, 212, 13);
+       border: 1px solid white;
+       text-align: center;
+        padding: 5px;
     }
 
     .contas {
-      color: red;
+      color: rgb(231, 103, 103);
+        border: 1px solid white;
+         text-align: center;
+          padding: 5px;
     }
 
     .sobrou {
-      color: blue;
+      color: rgb(5, 142, 247);
+       border: 1px solid white;
+        text-align: center;
+         padding: 5px;
     }
   
+    .vrva {
+      color: rgb(255, 184, 52);
+       border: 1px solid white;
+        text-align: center;
+        padding: 5px;
+    }
