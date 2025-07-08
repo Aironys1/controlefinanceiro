@@ -3,44 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <title>Controle Financeiro Pessoal</title>
-  <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F6L2HSFT1D"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <link rel="stylesheet" href="style.css">
 
-  gtag('config', 'G-F6L2HSFT1D');
-</script>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F6L2HSFT1D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-F6L2HSFT1D');
+  </script>
 </head>
 <body>
 
-<h1>Controle Financeiro Pessoal</h1>
-<div class="container">
-  <div class="section">
+  <h1>Controle Financeiro Pessoal</h1>
+  <div class="container">
+    <div class="section">
 
-    <div class="bloco1">
-      <div class="renda">Renda</div>
-      <div class="person-title">Primeira Renda</div>
-      <div class="field-group">
-        <div class="field">
-          <label>Renda Fixa</label>
-          <input type="number" class="input" data-type="rendaFixa">
-        </div>
-        <div class="field">
-          <label>Renda Extra</label>
-          <input type="number" class="input" data-type="rendaExtra">
-        </div>
-        <div class="field">
-          <label>VR/VA</label>
-          <input type="number" class="input" data-type="vrva">
-        </div>
-      </div>
-
-      <div class="section">
-        <div class="person-title">Segunda Renda</div>
+      <div class="bloco1">
+        <div class="renda">Renda</div>
+        <div class="person-title">Primeira Renda</div>
         <div class="field-group">
           <div class="field">
             <label>Renda Fixa</label>
@@ -55,57 +38,130 @@
             <input type="number" class="input" data-type="vrva">
           </div>
         </div>
+
+        <div class="section">
+          <div class="person-title">Segunda Renda</div>
+          <div class="field-group">
+            <div class="field">
+              <label>Renda Fixa</label>
+              <input type="number" class="input" data-type="rendaFixa">
+            </div>
+            <div class="field">
+              <label>Renda Extra</label>
+              <input type="number" class="input" data-type="rendaExtra">
+            </div>
+            <div class="field">
+              <label>VR/VA</label>
+              <input type="number" class="input" data-type="vrva">
+            </div>
+          </div>
+        </div>
       </div>
+
+      <div class="field"><label>Casa</label><input type="number" class="input" data-type="casa"></div>
+      <div class="field"><label>Condomínio</label><input type="number" class="input" data-type="condominio"></div>
+      <div class="field"><label>IPTU</label><input type="number" class="input" data-type="iptu"></div>
+      <div class="field"><label>Luz</label><input type="number" class="input" data-type="luz"></div>
+      <div class="field"><label>Internet</label><input type="number" class="input" data-type="internet"></div>
+      <div class="field"><label>Babá</label><input type="number" class="input" data-type="baba"></div>
+      <div class="field"><label>Reserva Emergência</label><input type="number" class="input" data-type="reserva"></div>
     </div>
 
-    <div class="field">
-      <label>Casa</label>
-      <input type="number" class="input" data-type="casa">
+    <div class="section resultados">
+      <p class="ganhos">GANHOS: <span id="ganhos">R$ 0,00</span></p>
+      <p class="contas">CONTAS: <span id="contas">R$ 0,00</span></p>
+      <p class="sobrou">SOBROU: <span id="sobrou">R$ 0,00</span></p>
+      <p class="vrva">Soma VR/VA: <span id="vrva">R$ 0,00</span></p>
     </div>
-    <div class="field">
-      <label>Condomínio</label>
-      <input type="number" class="input" data-type="condominio">
-    </div>
-    <div class="field">
-      <label>IPTU</label>
-      <input type="number" class="input" data-type="iptu">
-    </div>
-    <div class="field">
-      <label>Luz</label>
-      <input type="number" class="input" data-type="luz">
-    </div>
-    <div class="field">
-      <label>Internet</label>
-      <input type="number" class="input" data-type="internet">
-    </div>
-    <div class="field">
-      <label>Babá</label>
-      <input type="number" class="input" data-type="baba">
-    </div>
-    <div class="field">
-      <label>Reserva Emergência</label>
-      <input type="number" class="input" data-type="reserva">
-    </div>
+
+    <button id="exportCSV" style="margin: 20px auto; display: block; padding: 10px; font-size: 1em;">
+      Exportar para CSV
+    </button>
   </div>
 
-  <div class="section resultados">
-    <p class="ganhos">GANHOS: <span id="ganhos">R$ 0,00</span></p>
-    <p class="contas">CONTAS: <span id="contas">R$ 0,00</span></p>
-    <p class="sobrou">SOBROU: <span id="sobrou">R$ 0,00</span></p>
-    <p class="vrva">Soma VR/VA: <span id="vrva">R$ 0,00</span></p>
-  </div>
+  <footer style="position: fixed; bottom: 0; width: 100%; background: #f0f0f0; text-align: center; padding: 8px; font-size: 0.9em; border-top: 1px solid #ccc;">
+    Criado por <strong>Aironys Garrido</strong> &copy; 2025
+  </footer>
 
-  <button id="exportCSV" style="margin: 20px auto; display: block; padding: 10px; font-size: 1em;">
-    Exportar para CSV
-  </button>
+  <!-- Scripts -->
+  <script>
+    function calcular() {
+      const inputs = document.querySelectorAll('.input');
+      let ganhos = 0, vrva = 0, contas = 0;
 
-</div>
+      inputs.forEach(input => {
+        const valor = parseFloat(input.value) || 0;
+        const tipo = input.dataset.type;
 
-<footer style="position: fixed; bottom: 0; width: 100%; background: #f0f0f0; text-align: center; padding: 8px; font-size: 0.9em; border-top: 1px solid #ccc;">
-  Criado por <strong>Aironys Garrido</strong> &copy; 2025
-</footer>
+        if (tipo === 'rendaFixa' || tipo === 'rendaExtra') ganhos += valor;
+        if (tipo === 'vrva') vrva += valor;
+        if (['casa', 'condominio', 'iptu', 'luz', 'internet', 'reserva', 'baba'].includes(tipo)) contas += valor;
+      });
 
-<script src="script.js"></script>
-<script src="exportCSV.js"></script>
+      const sobrou = ganhos - contas;
+
+      document.getElementById('ganhos').textContent = `R$ ${ganhos.toFixed(2).replace('.', ',')}`;
+      document.getElementById('vrva').textContent = `R$ ${vrva.toFixed(2).replace('.', ',')}`;
+      document.getElementById('contas').textContent = `R$ ${contas.toFixed(2).replace('.', ',')}`;
+      document.getElementById('sobrou').textContent = `R$ ${sobrou.toFixed(2).replace('.', ',')}`;
+    }
+
+    document.querySelectorAll('.input').forEach(input => {
+      input.addEventListener('input', event => {
+        calcular();
+
+        // Evento GA4 para digitação
+        if (typeof gtag === 'function') {
+          const tipoCampo = event.target.dataset.type || 'desconhecido';
+          gtag('event', `digitou_${tipoCampo}`, {
+            campo: tipoCampo,
+            valor: event.target.value || '0'
+          });
+        }
+      });
+    });
+
+    function exportarCSV() {
+      const inputs = document.querySelectorAll('.input');
+      const dados = [['Campo', 'Valor']];
+
+      inputs.forEach(input => {
+        const label = input.previousElementSibling?.innerText?.trim() || 'Sem label';
+        const valor = input.value ? parseFloat(input.value).toFixed(2).replace('.', ',') : '0,00';
+        dados.push([label, `R$ ${valor}`]);
+      });
+
+      dados.push(['GANHOS', document.getElementById('ganhos').textContent]);
+      dados.push(['CONTAS', document.getElementById('contas').textContent]);
+      dados.push(['SOBROU', document.getElementById('sobrou').textContent]);
+      dados.push(['VR/VA', document.getElementById('vrva').textContent]);
+
+      const linhas = dados.map(linha => linha.join(';')).join('\n');
+      const blob = new Blob(["\uFEFF" + linhas], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.setAttribute('href', url);
+      link.setAttribute('download', 'controle-financeiro.csv');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      // Evento GA4 para exportação
+      if (typeof gtag === 'function') {
+        gtag('event', 'exportar_csv', {
+          event_category: 'interacao',
+          event_label: 'Botão Exportar CSV clicado'
+        });
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      calcular(); // Inicia com valores zerados
+      const botaoExportar = document.getElementById('exportCSV');
+      if (botaoExportar) {
+        botaoExportar.addEventListener('click', exportarCSV);
+      }
+    });
+  </script>
 </body>
 </html>
