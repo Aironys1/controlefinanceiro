@@ -35,3 +35,13 @@ document.addEventListener('DOMContentLoaded', function () {
     botaoExportar.addEventListener('click', exportarCSV);
   }
 });
+
+
+
+
+if (typeof gtag === 'function') {
+  gtag('event', 'exportar_csv', {
+    event_category: 'interacao',
+    event_label: 'Clique no botão Exportar CSV'
+  });
+}
